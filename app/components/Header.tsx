@@ -83,7 +83,6 @@ export default function Header({ technologies, user }: { technologies: Technolog
           &times;
         </button>
         <div className="flex flex-col items-center gap-4 w-full px-8 pb-4">
-          <div className="w-full h-px bg-emerald-400 opacity-40"></div>
           <Image
             src={user?.image ?? "/user_icon.svg"}
             width={72}

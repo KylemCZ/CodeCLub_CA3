@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**', // This is a wildcard that allows ALL https domains
+        hostname: '**', // ALL https domains allowed (used for our image uploads)
       },
     ],
   },
