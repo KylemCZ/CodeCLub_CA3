@@ -14,18 +14,7 @@ export default function EditEventForm({
   const [state, action, pending] = useActionState(updateEvent, undefined)
 
   return (
-    <>
-      {state?.success && (
-        <div className="mb-6 px-4 py-3 rounded-lg bg-emerald-900 border border-emerald-500 text-emerald-300">
-          Event updated successfully.
-        </div>
-      )}
-      {state?.message && (
-        <div className="mb-6 px-4 py-3 rounded-lg bg-red-900 border border-red-500 text-red-300">
-          {state.message}
-        </div>
-      )}
-
+    <span>
       <form action={action} className="space-y-6 bg-gray-800 p-8 rounded-lg">
         <input type="hidden" name="id" value={event.id} />
 
@@ -133,14 +122,24 @@ export default function EditEventForm({
           />
         </div>
 
-        <button
+      <button
           type="submit"
           disabled={pending}
           className="w-full px-6 py-3 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold rounded transition duration-200"
         >
-          {pending ? 'Saving...' : 'Save Changes'}
+      {pending ? 'Saving...' : 'Save Changes'}
         </button>
       </form>
-    </>
+      {state?.success && (
+        <div className="mt-6 px-4 py-3 rounded-lg bg-emerald-900 border border-emerald-500 text-emerald-300">
+          Event updated successfully.
+        </div>
+      )}
+      {state?.message && (
+        <div className="mt-6 px-4 py-3 rounded-lg bg-red-900 border border-red-500 text-red-300">
+          {state.message}
+        </div>
+      )}
+    </span>
   )
 }

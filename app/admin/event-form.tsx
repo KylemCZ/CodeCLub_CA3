@@ -55,18 +55,7 @@ export default function EventForm({
   }
 
   return (
-    <>
-      {state?.success && (
-        <div className="mb-6 px-4 py-3 rounded-lg bg-emerald-900 border border-emerald-500 text-emerald-300">
-          Event created successfully.
-        </div>
-      )}
-      {state?.message && (
-        <div className="mb-6 px-4 py-3 rounded-lg bg-red-900 border border-red-500 text-red-300">
-          {state.message}
-        </div>
-      )}
-
+    <span>
       {pastEvents.length > 0 && (
         <div className="mb-4 p-4 bg-gray-700 rounded-lg border border-gray-600">
           <label htmlFor="copyFrom" className="block text-emerald-400 font-semibold mb-2">
@@ -208,6 +197,16 @@ export default function EventForm({
           {pending ? 'Creating...' : 'Create Event'}
         </button>
       </form>
-    </>
+      {state?.success && (
+        <div className="mt-6 px-4 py-3 rounded-lg bg-emerald-900 border border-emerald-500 text-emerald-300">
+          Event created successfully.
+        </div>
+      )}
+      {state?.message && (
+        <div className="mt-6 px-4 py-3 rounded-lg bg-red-900 border border-red-500 text-red-300">
+          {state.message}
+        </div>
+      )}
+    </span>
   )
 }
