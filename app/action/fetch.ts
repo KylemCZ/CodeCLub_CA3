@@ -42,6 +42,11 @@ export async function fetchAllProjects() : Promise <Projects[]> {
 
 }
 
+export async function fetchUserCount(): Promise<number> {
+  const res = await sql`SELECT COUNT(*) AS count FROM users WHERE is_active = true`;
+  return Number(res[0].count);
+}
+
 export async function fetchProjectsByTech(techId: string) : Promise <Projects[]> {
   const res = await sql`SELECT * FROM projects WHERE technology_id = ${techId} ORDER BY sort_order`;
   
