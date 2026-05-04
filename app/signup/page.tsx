@@ -6,7 +6,7 @@ export default async function Signup() {
     <main className="min-h-screen p-8">
       <div className="max-w-2xl mx-auto">
         <div className="mb-6">
-          <Link href={`/technologies`} className="text-blue-400 hover:text-blue-300 underline">
+          <Link href={`/`} className="text-blue-400 hover:text-blue-300 underline">
             ← Back to Home
           </Link>
         </div>
