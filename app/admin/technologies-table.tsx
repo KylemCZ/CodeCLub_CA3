@@ -73,7 +73,7 @@ function TechRow({ tech }: { tech: Technology }) {
 
 export default function TechnologiesTable({ technologies }: { technologies: Technology[] }) {
   return (
-    <>
+    <span>
       {/* Mobile cards */}
       <div className="flex flex-col gap-3 md:hidden">
         {technologies.map((tech) => (
@@ -99,6 +99,6 @@ export default function TechnologiesTable({ technologies }: { technologies: Tech
           </tbody>
         </table>
       </div>
-    </>
+    </span>
   )
 }

@@ -10,7 +10,7 @@ export default function UserPanel({ user }: { user: User }) {
       <div className="w-3/4 h-px bg-emerald-400 opacity-40"></div>
       <div className="flex flex-col gap-3 w-3/4">
         {user ? (
-          <>
+          <span>
             <Link
               href={user.role === "admin" ? "/admin" : "/profile"}
               className="flex flex-col items-center gap-2 group"
@@ -26,7 +26,7 @@ export default function UserPanel({ user }: { user: User }) {
                 {user.name}
               </span>
             </Link>
-            <p className="text-center text-emerald-400 text-xs capitalize tracking-wide">{user.role}</p>
+            <p className="text-center text-emerald-400 text-xs capitalize tracking-wide mb-2">{user.role}</p>
             <form action={logout}>
               <button
                 type="submit"
@@ -35,9 +35,9 @@ export default function UserPanel({ user }: { user: User }) {
                 Logout
               </button>
             </form>
-          </>
+          </span>
         ) : (
-          <>
+          <span>
             <Image
               src="/user_icon.svg"
               width={80}
@@ -57,7 +57,7 @@ export default function UserPanel({ user }: { user: User }) {
             >
               Login
             </Link>
-          </>
+          </span>
         )}
       </div>
     </div>

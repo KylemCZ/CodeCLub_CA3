@@ -114,7 +114,7 @@ function UserRow({ user }: { user: User }) {
 
 export default function UsersTable({ users }: { users: User[] }) {
   return (
-    <>
+    <span>
       {/* Mobile cards */}
       <div className="flex flex-col gap-3 md:hidden">
         {users.map((user) => (
@@ -141,6 +141,6 @@ export default function UsersTable({ users }: { users: User[] }) {
           </tbody>
         </table>
       </div>
-    </>
+    </span>
   )
 }
