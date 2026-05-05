@@ -7,7 +7,7 @@ export default function EventsList({ events }: { events: Event[] }) {
   }
 
   return (
-    <>
+    <span>
       {/* Mobile cards */}
       <div className="flex flex-col gap-3 md:hidden">
         {events.map((event) => (
@@ -31,7 +31,7 @@ export default function EventsList({ events }: { events: Event[] }) {
               </div>
               <div>
                 <p className="text-gray-500 text-xs uppercase tracking-wide">Time</p>
-                <p className="text-gray-300">{event.startTime} – {event.endTime}</p>
+                <p className="text-gray-300">{event.startTime} - {event.endTime}</p>
               </div>
               <div>
                 <p className="text-gray-500 text-xs uppercase tracking-wide">Tickets</p>
@@ -61,7 +61,7 @@ export default function EventsList({ events }: { events: Event[] }) {
                 <td className="py-3 px-4 text-white">{event.name}</td>
                 <td className="py-3 px-4 text-gray-400">{event.technologyId}</td>
                 <td className="py-3 px-4 text-gray-400">{event.date}</td>
-                <td className="py-3 px-4 text-gray-400">{event.startTime} – {event.endTime}</td>
+                <td className="py-3 px-4 text-gray-400">{event.startTime} - {event.endTime}</td>
                 <td className="py-3 px-4 text-gray-400">{event.tickets}</td>
                 <td className="py-3 px-4">
                   <Link
@@ -76,6 +76,6 @@ export default function EventsList({ events }: { events: Event[] }) {
           </tbody>
         </table>
       </div>
-    </>
+    </span>
   )
 }

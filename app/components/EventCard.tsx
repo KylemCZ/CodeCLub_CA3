@@ -31,7 +31,7 @@ export default function EventCard({ event, hasBooked, isNinja, guardianMembers, 
           </div>
           <div className="bg-purple-950/50 rounded-xl p-3">
             <p className="text-purple-400 text-xs font-semibold uppercase tracking-wide mb-1">Time</p>
-            <p className="text-white text-sm font-semibold">{event.startTime} – {event.endTime}</p>
+            <p className="text-white text-sm font-semibold">{event.startTime} - {event.endTime}</p>
           </div>
           <div className="col-span-2 bg-purple-950/50 rounded-xl p-3 flex items-center justify-between">
             <p className="text-purple-400 text-xs font-semibold uppercase tracking-wide">Tickets Available</p>

@@ -8,10 +8,10 @@ export default async function ProfileLayout({ children }: { children: React.Reac
   const user = await getUser();
 
   return (
-    <>
+    <span>
       <Header technologies={technologies} user={user} />
       <main>{children}</main>
       <Footer />
-    </>
+    </span>
   );
 }

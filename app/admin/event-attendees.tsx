@@ -7,7 +7,7 @@ import { Event } from '@/app/lib/definitions'
 type Stats = Awaited<ReturnType<typeof fetchEventAttendeeStats>>
 
 function pct(value: number, total: number) {
-  if (total === 0) return '—'
+  if (total === 0) return '-'
   return `${Math.round((value / total) * 100)}%`
 }
 
@@ -54,7 +54,7 @@ export default function EventAttendees({ events }: { events: Event[] }) {
         onChange={(e) => handleSelect(e.target.value)}
         className="w-full bg-gray-700 text-white rounded border border-gray-600 px-3 py-2 mb-6 focus:outline-none focus:border-emerald-500"
       >
-        <option value="">— Select an event —</option>
+        <option value="">- Select an event -</option>
         {events.map((event) => (
           <option key={event.id} value={event.id}>
             {event.name} ({event.date}) · {event.technologyId}
@@ -96,10 +96,10 @@ export default function EventAttendees({ events }: { events: Event[] }) {
 
                 <SectionHeader label="Age" />
                 <Row label="Under 13" value={stats.under13}  total={stats.total} />
-                <Row label="13 – 18"  value={stats.age13_18} total={stats.total} />
-                <Row label="18 – 29"  value={stats.age18_29} total={stats.total} />
-                <Row label="29 – 39"  value={stats.age29_39} total={stats.total} />
-                <Row label="39 – 55"  value={stats.age39_55} total={stats.total} />
+                <Row label="13 - 18"  value={stats.age13_18} total={stats.total} />
+                <Row label="18 - 29"  value={stats.age18_29} total={stats.total} />
+                <Row label="29 - 39"  value={stats.age29_39} total={stats.total} />
+                <Row label="39 - 55"  value={stats.age39_55} total={stats.total} />
                 <Row label="55+"      value={stats.above55}  total={stats.total} />
               </tbody>
             </table>

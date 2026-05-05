@@ -46,7 +46,7 @@ export default async function ProfileBookings() {
                   </div>
                   <div className="bg-purple-950/50 rounded-xl p-3">
                     <p className="text-purple-400 text-xs font-semibold uppercase tracking-wide mb-1">Time</p>
-                    <p className="text-white text-sm font-semibold">{booking.startTime} – {booking.endTime}</p>
+                    <p className="text-white text-sm font-semibold">{booking.startTime} - {booking.endTime}</p>
                   </div>
                 </div>
 

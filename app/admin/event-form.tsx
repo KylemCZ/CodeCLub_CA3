@@ -67,7 +67,7 @@ export default function EventForm({
             onChange={(e) => handleCopy(e.target.value)}
             className="w-full px-4 py-2 bg-gray-600 text-white rounded border border-gray-500 focus:outline-none focus:border-emerald-500"
           >
-            <option value="">— Select an event to copy —</option>
+            <option value="">- Select an event to copy -</option>
             {pastEvents.map((e) => (
               <option key={e.id} value={e.id}>{e.name}</option>
             ))}

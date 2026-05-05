@@ -4,8 +4,7 @@ import sql from '@/app/lib/db';
 import { SignupFormSchema, FormState, LoginFormSchema, NinjaLoginFormSchema } from '@/app/lib/definitions'
 import bcrypt from 'bcryptjs'
 import { redirect } from 'next/navigation';
-import { createSession } from '@/app/lib/session';
-import { deleteSession } from '@/app/lib/session'
+import { createSession, deleteSession } from '@/app/lib/session';
 
 export async function signup(_state: FormState, formData: FormData) {
   // 1. Validate form fields
